@@ -1,16 +1,7 @@
-const style = {
-    contents: {
-        height: '100vh',
-        marginRight: '-300px',
-        float: 'right',
-        width: '100%',
-        backgroundColor: '#FFC800'
-    }
-}
+import './css/contents.css'
 
-const contents = ({contents}) =>
-<div id="contents" style={style.contents}>
-    {contents}
+const contents = () =>
+<div id="contents">
 </div>
 
 export default contents

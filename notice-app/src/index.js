@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Wrapper from './components/wrapper'
 import reportWebVitals from './reportWebVitals';
-
-import data from './data/data'
+import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Wrapper data={data} />
+    <Wrapper />
   </React.StrictMode>,
   document.getElementById('root')
 );

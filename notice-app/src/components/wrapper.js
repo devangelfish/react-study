@@ -1,5 +1,7 @@
 import React from 'react'
 import SideBar from './sidebar'
+import Contents from './contents'
+import data from '../data/data'
 
 // const wrapper = ({title, contents, data}) =>
 // <div id="wrapper" style={wrapper.height} >
@@ -10,11 +12,27 @@ import SideBar from './sidebar'
 class Wrapper extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            sidebarHidden: false,
+            list: data
+        }
+        this.onHide = this.onHide.bind(this)
+    }
+
+    onHide() {
+        let {sidebarHidden} = this.state
+        sidebarHidden = sidebarHidden ? false : true
+        this.setState({sidebarHidden})
     }
 
     render() {
+        const {onHide} = this
+        const {state} = this
         return (
-            <SideBar data={this.props.data}/>
+            <div id="wrapper">
+                <SideBar onHide={onHide} {...state}/>
+                <Contents />
+            </div>
         ) 
     }
 }

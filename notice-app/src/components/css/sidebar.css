@@ -1,0 +1,31 @@
+ul {
+    list-style: none;;
+    margin: 0;
+    padding: 0;
+}
+#side-bar {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    background-color: #191D1F;
+    height: 100vh;
+}
+#grip {
+    margin: 10px 10px 0 0;
+    top: 0;
+    right: -28px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2em;
+    position: absolute;
+}
+.left-hide {
+	margin-left: -300px;
+}
+.margin-anim {
+	-webkit-transition: margin .5s ease;
+    -moz-transition: margin .5s ease;
+    -o-transition: margin .5s ease;
+	transition: margin .5s ease;
+}

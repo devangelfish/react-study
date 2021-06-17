@@ -1,0 +1,23 @@
+li {
+    margin-bottom: 20px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    background-color: #F0FFFF;
+}
+#tap-title {
+    border-radius: 5px 5px 0 0;
+    padding: 3px 14px;
+    position: relative;
+    color: #265CC0;
+    font-weight: bold;
+    background: #D1D1D1;
+}
+#down-arrow {
+    margin-top: -7px;
+    font-size: 14px;
+    color: #767676;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}

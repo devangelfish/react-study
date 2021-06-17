@@ -1,0 +1,10 @@
+#detail {
+    padding: 3px 14px;
+    overflow: hidden;
+}
+#detail-title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
