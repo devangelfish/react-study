@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import sidebar from './components/sidebar'
-import data from './data/data'
+import Wrapper from './components/wrapper'
 import reportWebVitals from './reportWebVitals';
+
+import data from './data/data'
 
 ReactDOM.render(
   <React.StrictMode>
-    <sidebar data={data} />
+    <Wrapper data={data} />
   </React.StrictMode>,
   document.getElementById('root')
 );
