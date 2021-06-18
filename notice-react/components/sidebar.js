@@ -1,4 +1,4 @@
-import data from "./data"
+import data from "../data/data"
 import menuList from "./menuList"
 
 const sideBar = ({data}) =>
@@ -10,3 +10,5 @@ const sideBar = ({data}) =>
         )}
     </ul>
 </div>
+
+export default sidebar
