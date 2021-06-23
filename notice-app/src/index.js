@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Wrapper from './components/wrapper'
+import { Provider } from 'react-redux'
+import App from './components/app'
+import store from './store'
+import { fetchCategories } from "./action"
 import reportWebVitals from './reportWebVitals';
 import './index.css'
 
+store.dispatch(fetchCategories())
+
+console.log(store.getState())
+
 ReactDOM.render(
   <React.StrictMode>
-    <Wrapper />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,55 +1,89 @@
-let data = [
+export const sidebar = {
+    sidebar: false
+}
+
+export const categories = [
     {
-        title: '심사내역',
-        list: [
+        categoryNo: 1,
+        categoryName: "심사내역",
+        hidden: false,
+        writings: [
             {
-                url: '#',
-                description: "2021년 심사 HOT ISSUE"
+                writingNo: "1",
+                title: "2021년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             },
             {
-                url: '#',
-                description: "2020년 심사 HOT ISSUE"
+                writingNo: "2",
+                title: "2020년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             },
             {
-                url: '#',
-                description: "2019년 심사 HOT ISSUE"
+                writingNo: "3",
+                title: "2019년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             }
         ]
     },
     {
-        title: '프로그램내역',
-        list: [
+        categoryNo: 2,
+        categoryName: "프로그램내역",
+        hidden: false,
+        writings: [
             {
-                url: '#',
-                description: "2021년 업데이트 HOT ISSUE"
+                writingNo: "4",
+                title: "2021년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             },
             {
-                url: '#',
-                description: "2020년 업데이트 HOT ISSUE"
+                writingNo: "5",
+                title: "2020년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             },
             {
-                url: '#',
-                description: "2019년 업데이트 ISSUE"
+                writingNo: "6",
+                title: "2019년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             }
         ]
     },
     {
-        title: '기타내역',
-        list: [
+        categoryNo: 3,
+        categoryName: "기타내역",
+        hidden: false,
+        writings: [
             {
-                url: '#',
-                description: "2021년 기타내역"
+                writingNo: "7",
+                title: "2021년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             },
             {
-                url: '#',
-                description: "2020년 기타내역"
+                writingNo: "8",
+                title: "2020년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             },
             {
-                url: '#',
-                description: "2019년 기타내역"
+                writingNo: "9",
+                title: "2019년 심사 HOT ISSUE",
+                contents: "empty",
+                timstamp: ""
             }
         ]
     }
 ]
+
+export const data = {
+    ...sidebar,
+    ...categories
+}
+
 
 export default data
