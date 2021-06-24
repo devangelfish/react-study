@@ -1,14 +1,22 @@
 import React from 'react'
-import { NoticeContainer } from '../container'
+import { useSelector, useDispatch } from 'react-redux';
+import Notice from './notice'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons"
+import { foldCategory } from '../action'
 import './css/notice-wrapper.css'
 
-const NoticeWrapper = ({categoryNo, categoryName, writings, hidden, onHideNotice}) =>
-    <li>
-        <div id="tap-title" key={categoryNo}>{categoryName}<FontAwesomeIcon id="down-arrow" icon={faAngleDoubleDown} onClick={() => onHideNotice(categoryNo)} /></div>
-        <NoticeContainer writings={writings} hidden={hidden} />
-    </li>
+const NoticeWrapper = ({id}) => {
 
+    const category = useSelector(state => state.data[id])
+    const {no, name, writing, fold} = category
+
+    const dispatch = useDispatch();
+
+    return (<li>
+        <div id='tap-title' key={no}>{name}<FontAwesomeIcon id='up-arrow' style={fold ? {transform: 'rotate(180deg)'}: null} icon={faAngleDoubleUp} onClick={() => dispatch(foldCategory(category, !fold))} /></div>
+        <Notice writing={writing} fold={fold} />
+    </li>)
+}
 
 export default NoticeWrapper

@@ -16,13 +16,13 @@ class Notice extends React.Component {
     }
 
     render() {
-        const { writings, hidden } = this.props
+        const { writing, fold } = this.props
         const { height } = this.state
         return (
-            <div id="detail" className={hidden ? "closed-height" : null}
+            <div id="detail" className={fold ? "closed-height" : null}
                 style={height === 0 ? null : { 'height': height }} ref={ref => this.box = ref}>
-                {writings.map(({ writingNo, title }) =>
-                    <div key={writingNo} id="detail-title">{title}</div>
+                {writing.map(({ no, title }) =>
+                    <div key={no} id="detail-title">{title}</div>
                 )}
             </div>
         )

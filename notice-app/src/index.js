@@ -3,13 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import App from './components/app'
 import store from './store'
-import { fetchCategories } from "./action"
 import reportWebVitals from './reportWebVitals';
 import './index.css'
-
-store.dispatch(fetchCategories())
-
-console.log(store.getState())
 
 ReactDOM.render(
   <React.StrictMode>

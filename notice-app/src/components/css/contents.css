@@ -2,5 +2,7 @@
     height: 100vh;
     float: right;
     width: 100%;
-    background-color: #FFC800
+    background-color: #FFC800;
+    box-sizing: border-box;
+    padding: 30px
 }

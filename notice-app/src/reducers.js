@@ -1,18 +1,43 @@
 import C from './const'
 
-export const writings = (state = [], action) => {
+const initalState = [
+    {
+        no: 0,
+        name: "",
+        fold: true,
+        writing: [
+            {
+                no: 0,
+                title: "",
+                contents: "",
+                timstamp: ""
+            },
+        ]
+    }
+]
+
+export const data = (state = initalState, action) => {
     switch (action.type) {
-        case C.FETCH_WRITINGS:
-            return action
+        case C.FETCH_INITIAL_DATA:
+            return action.data
+        case C.FOLD_CATEGORY: {
+            return state.map((category) =>
+                (category.categoryNo == action.category.categoryNo) ?
+                    {
+                        ...action.category,
+                        fold: action.category.fold
+                    } : category
+            )
+        }
         default:
             return state
     }
 }
 
-export const categories = (state=[], action) => {
-    switch (action.type) {
-        case C.FETCH_CATEGORIES:
-            return action.categories
+export const contents = (state = {}, action) => {
+    switch(action.type) {
+        case C.FETCH_CONTENTS: 
+            return action.contents
         default:
             return state
     }
@@ -21,25 +46,8 @@ export const categories = (state=[], action) => {
 export const sidebar = (state=true, action) => {
     switch (action.type) {
         case C.HIDE_SIDEBAR:
-            return action.hidden
+            return action.sidebar
         default:
             return state
     }
 }
-
-export const notice = (state=[], action) => {
-    switch (action.type) {
-        case C.HIDE_NOTICE:
-            return state.map((category) =>
-                (category.categoryNo === action.categoryNo) ?
-                {
-                    ...category,
-                    hidden: action.hidden
-                } :
-                category
-            )
-        default:
-            return state
-    }
-}
-
