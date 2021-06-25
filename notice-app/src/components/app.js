@@ -7,6 +7,5 @@ const App = () =>
         <Sidebar />
         <Contents />
     </div>
-    
 
 export default App

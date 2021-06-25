@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect ,useState } from 'react'
+import { useDispatch } from 'react-redux'
 import './css/notice.css'
 
 class Notice extends React.Component {

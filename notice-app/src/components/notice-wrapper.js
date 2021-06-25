@@ -13,7 +13,7 @@ const NoticeWrapper = ({category}) => {
 
     return (<li>
         <div id='tap-title' key={no}>{name}<FontAwesomeIcon id='up-arrow' style={fold  ? {transform: 'rotate(180deg)'}: null} icon={faAngleDoubleUp} onClick={() => dispatch(foldCategory(category))} /></div>
-        <Notice writing={writing} fold={fold} />
+        <Notice no={no} writing={writing} fold={fold} />
     </li>)
 }
 

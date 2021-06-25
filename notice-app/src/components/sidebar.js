@@ -20,8 +20,8 @@ const Sidebar = () => {
     return (<div id="side-bar" className={sidebar ? 'full-height margin-anim' : 'full-height margin-anim left-hide'}>
     <FontAwesomeIcon id="grip" icon={faGripLinesVertical} onClick={() => dispatch(onHideSidebar(!sidebar))} />
     <ul>
-        {data.map((category, index) =>
-            <NoticeWrapper key={index} category={category} />
+        {data?.map(category =>
+            <NoticeWrapper key={category.no} category={category} />
         )}
     </ul>
 </div>)
