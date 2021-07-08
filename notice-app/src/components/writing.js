@@ -1,8 +1,7 @@
-import React, { useEffect ,useState } from 'react'
-import { useDispatch } from 'react-redux'
-import './css/notice.css'
+import React from 'react'
+import './css/writing.css'
 
-class Notice extends React.Component {
+class Writing extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -20,14 +19,14 @@ class Notice extends React.Component {
         const { writing, fold } = this.props
         const { height } = this.state
         return (
-            <div id="detail" className={fold ? "closed-height" : null}
+            <div id="writing" className={fold ? "closed-height anim" : "anim"}
                 style={height === 0 ? null : { 'height': height }} ref={ref => this.box = ref}>
                 {writing.map(({ no, title }) =>
-                    <div key={no} id="detail-title">{title}</div>
+                    <div key={no} id="writing-title" className='ellipsis'>{title}</div>
                 )}
             </div>
         )
     }
 }
 
-export default Notice
+export default Writing

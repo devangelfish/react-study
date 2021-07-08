@@ -1,11 +1,12 @@
 import React from 'react'
 import Sidebar from './sidebar'
-import Contents from './contents'
+import Container from './container'
+import './css/common.css'
 
-const App = () =>
-    <div id="wrapper">
+const App = () => 
+    <div id="wrapper" className="full-screen">
         <Sidebar />
-        <Contents />
+        <Container />
     </div>
 
 export default App

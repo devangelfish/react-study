@@ -1,0 +1,30 @@
+#wrapper {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.margin-anim {
+	-webkit-transition: margin .5s ease;
+    -moz-transition: margin .5s ease;
+    -o-transition: margin .5s ease;
+	transition: margin .5s ease;
+}
+
+.full-screen {
+    top: 0;
+    bottom: 0;
+}
+
+.anim {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+	transition: all .5s ease;  
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

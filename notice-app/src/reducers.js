@@ -26,10 +26,19 @@ export const contents = (state = {}, action) => {
     }
 }
 
-export const sidebar = (state=true, action) => {
+export const sidebar = (state = true, action) => {
     switch (action.type) {
         case C.HIDE_SIDEBAR:
             return action.sidebar
+        default:
+            return state
+    }
+}
+
+export const auth = (state = { token: undefined }, action) => {
+    switch (action.type) {
+        case C.AUTH_USER:
+            return action.auth
         default:
             return state
     }

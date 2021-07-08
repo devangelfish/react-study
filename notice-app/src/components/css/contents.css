@@ -1,8 +1,13 @@
 #contents {
-    height: 100vh;
-    float: right;
+    position: absolute;
     width: 100%;
-    background-color: #FFC800;
+    right: 0;
+    background-color: #FFF;
     box-sizing: border-box;
-    padding: 30px
+    padding: 30px;
+    z-index: 1
+}
+
+.right-hide {
+    margin-right: -300px;
 }

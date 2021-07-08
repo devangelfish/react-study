@@ -1,0 +1,11 @@
+#writing {
+    padding: 0 14px;
+    overflow: hidden;
+}
+#writing.closed-height {
+	height: 0 !important;
+}
+#writing-title {
+    padding: 3px 0;
+    display: block;
+}
