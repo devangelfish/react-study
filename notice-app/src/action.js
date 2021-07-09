@@ -6,8 +6,7 @@ export const fetchinitialDataAsync = async () => {
     return {
         type: C.FETCH_INITIAL_DATA,
         data: data?.map((category) => ({
-            ...category,
-            fold: false
+            ...category
         }))
     }
 }
@@ -21,7 +20,7 @@ export const getAuthToken = async (loginInfo) => {
         },
         data: JSON.stringify(loginInfo)
     })
-    const { id } = { loginInfo }
+    const { id } = loginInfo
     return {
         type: C.AUTH_USER,
         auth: {
@@ -30,14 +29,6 @@ export const getAuthToken = async (loginInfo) => {
         }
     }
 }
-
-export const foldCategory = (category) => ({
-    type: C.FOLD_CATEGORY,
-    category: {
-        ...category,
-        fold: !category.fold
-    }
-})
 
 export const onHideSidebar = (isActive) => ({
     type: C.HIDE_SIDEBAR,

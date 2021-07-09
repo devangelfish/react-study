@@ -17,7 +17,6 @@ const Login = ({match}) => {
     const { token } = useSelector(state => state.auth)
 
     if(token) {
-        console.log(match.path)
         return <Redirect to={match.path}/>
     } 
 

@@ -4,14 +4,6 @@ export const data = (state = [], action) => {
     switch (action.type) {
         case C.FETCH_INITIAL_DATA:
             return action.data
-        case C.FOLD_CATEGORY: {
-            return state.map((category) =>
-                (category.no === action.category.no) ?
-                    {
-                        ...action.category,
-                    } : category
-            )
-        }
         default:
             return state
     }
