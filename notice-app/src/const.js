@@ -1,5 +1,5 @@
 const constants = {
-    API_URL: "http://localhost:50247",
+    API_URL: "http://localhost:9999",
     HIDE_SIDEBAR: "HIDE_SIDEBAR",
     FETCH_INITIAL_DATA: "FETCH_INITIAL_DATA",
     FETCH_CONTENTS: "FETCH_INITIAL_CONTENTS",

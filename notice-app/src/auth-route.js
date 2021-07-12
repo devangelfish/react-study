@@ -4,7 +4,7 @@ import { Route } from "react-router-dom"
 import Login from './components/login'
 
 const AuthRoute = ({ path, exact = true, component }) => {
-    const { token } = useSelector(state => state.auth)
+    const token = useSelector(state => state.auth.token)
     return <Route exact={exact} path={path} component={token ? component : Login}></Route>
 }
 

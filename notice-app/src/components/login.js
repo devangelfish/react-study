@@ -1,23 +1,24 @@
+import './css/login.css'
 import { useState } from "react"
 import { Redirect } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { getAuthToken } from "../action"
-import './css/login.css'
 
-const Login = ({match}) => {
+const Login = ({location}) => {
     const dispatch = useDispatch()
 
-    const [ id ,setId ] = useState()
-    const [ password ,setPassword] = useState()
+    const [ id, setId ] = useState()
+    const [ password, setPassword] = useState()
 
     const login = () => {
         getAuthToken({ id, password }).then(result => dispatch(result))
     }
 
     const { token } = useSelector(state => state.auth)
+    const { from } = location.state || { from: { pathname: "/" } };
 
     if(token) {
-        return <Redirect to={match.path}/>
+        return <Redirect to={from}/>
     } 
 
     return <div id="login-container">

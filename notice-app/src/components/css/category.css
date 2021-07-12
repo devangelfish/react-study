@@ -4,6 +4,7 @@ li {
     position: relative;
     background-color: #F0FFFF;
 }
+
 #category {
     border-radius: 5px 5px 0 0;
     padding: 3px 14px;
@@ -12,6 +13,7 @@ li {
     font-weight: bold;
     background: #D1D1D1;
 }
+
 #up-arrow {
     margin-top: -7px;
     font-size: 14px;
