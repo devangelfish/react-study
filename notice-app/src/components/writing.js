@@ -38,7 +38,7 @@ const Writing = ({ writing, fold }) => {
     }, [height])
     
     return (
-        <div id="writing" className={fold ? "closed-height anim" : "anim"}
+        <div id="writing" className={fold ? "closed-height height-anim" : "height-anim"}
             style={height === 0 ? null : { 'height': height }} ref={writingEl}>
             {writing.map(({ no, title }) =>
                 <div key={no} id="writing-title" className='ellipsis'>{title}</div>
