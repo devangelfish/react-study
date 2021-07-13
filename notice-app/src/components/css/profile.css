@@ -6,6 +6,15 @@
 }
 
 #welcome-message {
+    width: 78%;
+    float: left;
     color: #fff;
 	font-weight: bold;
+}
+
+.tool {
+    width: 11%;
+    height: 21px;
+    color: #CCCCCC;
+    cursor: pointer;
 }
